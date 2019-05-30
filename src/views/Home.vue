@@ -1,9 +1,5 @@
 <template>
-  <div class="home">
-    000
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <div class="home">home</div>
 </template>
 
 <script>
