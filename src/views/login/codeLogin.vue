@@ -92,6 +92,7 @@ export default {
       this.$refs.loginForm.validate(valid => {
         if (valid) {
           console.log("验证码登录");
+          this.$router.push({ path: "/dashboard/dashboard" });
         } else {
           console.log("验证码登录--请检查信息");
         }

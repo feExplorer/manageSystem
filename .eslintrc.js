@@ -15,7 +15,10 @@ module.exports = {
     "space-before-function-paren": [0], // 不检测函数名和括号间的空格
     "camelcase": [0],
     "no-trailing-spaces": [0],
-    "no-template-curly-in-string": [0]
+    "no-template-curly-in-string": [0],
+    "indent": [0],
+    "eol-last": [0],
+    "space-in-parens": [0]
   },
   parserOptions: {
     parser: 'babel-eslint'

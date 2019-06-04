@@ -10,7 +10,7 @@
       text-color="white"
       active-text-color="#42b983"
     >
-      <sidebar-item></sidebar-item>
+      <sidebar-item :routes="permissionRouters"></sidebar-item>
     </el-menu>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
     SidebarItem
   },
   computed: {
-    ...mapGetters(["sidebarState"])
+    ...mapGetters(["sidebarState", "permissionRouters"])
   }
 };
 </script>

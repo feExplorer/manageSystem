@@ -78,6 +78,7 @@ export default {
       this.$refs.loginForm.validate(valid => {
         if (valid) {
           console.log("账号密码登录");
+          this.$router.push({ path: "/dashboard/dashboard" });
         } else {
           console.log("账号密码登录--请检查信息");
         }
