@@ -13,11 +13,15 @@ import Validate from '@/utils/filterRules'
 
 import inputDirective from '@/directive/el-input'; // 添加此行=>自定义全局指令
 
+// 引入v-charts
+import VCharts from 'v-charts'
+
 Vue.use(ElementUI, {
   locale
 })
 Vue.use(Validate)
 Vue.use(inputDirective)
+Vue.use(VCharts)
 Vue.config.productionTip = false
 
 new Vue({
