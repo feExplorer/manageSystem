@@ -5,6 +5,6 @@
 </template>
 <style lang="less" scoped>
 .app-main {
-  height: 100%;
+  height: calc(100vh - 85px);
 }
 </style>
