@@ -24,7 +24,7 @@ export default {
   }
 };
 </script>
-<style lang="less" scoped>
+<style lang="less">
 @import "../../styles/index.less";
 .app-wrapper {
   height: 100%;
@@ -44,7 +44,7 @@ export default {
 
   .main-container {
     min-height: 100%;
-    margin-left: 210px;
+    margin-left: 200px;
     transition: margin-left 0.5s;
   }
 }
