@@ -32,7 +32,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="scss">
 .login-container {
   .login-border {
     padding: 30px 50px 25px 50px;
@@ -67,7 +67,7 @@ export default {
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../../assets/login/login.png");
+  background-image: url("../../assets/images/login/login.png");
   background-size: cover;
 }
 </style>

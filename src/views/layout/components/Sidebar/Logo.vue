@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar-logo">logo</div>
 </template>
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .sidebar-logo {
   height: 84px;
   width: 100%;

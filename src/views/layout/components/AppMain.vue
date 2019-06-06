@@ -3,7 +3,7 @@
     <router-view/>
   </div>
 </template>
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .app-main {
   height: calc(100vh - 85px);
 }

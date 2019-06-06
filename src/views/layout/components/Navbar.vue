@@ -47,7 +47,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="scss">
 .navbar {
   height: 50px;
   line-height: 50px;

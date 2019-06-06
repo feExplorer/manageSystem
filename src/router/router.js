@@ -19,7 +19,7 @@ export const constantRouterMap = [{
     component: Layout,
     meta: {
       title: '首页',
-      icon: 'el-icon-menu'
+      icon: 'icon-dashboard'
     },
     children: [{
       path: 'dashboard',
@@ -27,7 +27,7 @@ export const constantRouterMap = [{
       component: () => import('@/views/dashboard/Dashboard'),
       meta: {
         title: 'dashboard',
-        icon: 'el-icon-menu'
+        icon: 'icon-dashboard'
       }
     }]
   },
@@ -39,7 +39,7 @@ export const constantRouterMap = [{
     name: 'charts',
     meta: {
       title: 'charts',
-      icon: 'el-icon-s-data'
+      icon: 'icon-barchart'
     },
     children: [{
         path: 'DiscountFigure',
@@ -168,6 +168,45 @@ export const constantRouterMap = [{
         }
       }
     ]
+  },
+  // better-scroll
+  {
+    path: '/better-scroll',
+    component: Layout,
+    redirect: 'better-scroll/to',
+    meta: {
+      title: 'better-scroll',
+      icon: 'icon-scroll'
+    },
+    children: [{
+      path: 'to',
+      name: 'better-scroll',
+      component: () => import('@/views/better-scroll/to'),
+      meta: {
+        title: 'better-scroll',
+        icon: 'icon-Scroll'
+      }
+    }]
+  },
+  // 表格
+  {
+    path: '/table',
+    component: Layout,
+    redirect: '/table/complex-table',
+    name: 'table',
+    meta: {
+      title: 'Table',
+      icon: 'icon-table'
+    },
+    children: [{
+      path: 'complex-table',
+      name: 'complex-table',
+      component: () => import('@/views/table/complex-table'),
+      meta: {
+        title: 'complexTable',
+        icon: 'icon-table'
+      }
+    }]
   }
 ]
 export default new Router({

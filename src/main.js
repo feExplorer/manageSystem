@@ -16,6 +16,8 @@ import inputDirective from '@/directive/el-input'; // 添加此行=>自定义全
 // 引入v-charts
 import VCharts from 'v-charts'
 
+// 引入 iconfont
+import './assets/iconfont/iconfont.css'
 Vue.use(ElementUI, {
   locale
 })

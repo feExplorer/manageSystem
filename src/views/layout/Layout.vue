@@ -24,8 +24,8 @@ export default {
   }
 };
 </script>
-<style lang="less">
-@import "../../styles/index.less";
+<style lang="scss">
+@import "~@/styles/index.scss";
 .app-wrapper {
   height: 100%;
   min-height: 100%;
@@ -38,13 +38,13 @@ export default {
     overflow: hidden;
     height: 100%;
     width: 200px;
-    background: @sidebar-bg;
+    background: $sidebar-bg;
     transition: width 0.5s;
   }
 
   .main-container {
     min-height: 100%;
-    margin-left: 200px;
+    margin-left: 210px;
     transition: margin-left 0.5s;
   }
 }
@@ -53,7 +53,7 @@ export default {
     width: 64px !important;
   }
   .main-container {
-    margin-left: 64px;
+    margin-left: 74px;
   }
 }
 </style>

@@ -8,7 +8,7 @@
           :key="item.children[0].name"
         >
           <el-menu-item :index="item.path+'/'+item.children[0].path">
-            <i :class="item.children[0].meta.icon"></i>
+            <i class="icon iconfont" :class="item.children[0].meta.icon"></i>
             <span
               v-if="item.children[0].meta&&item.children[0].meta.title"
               slot="title"
@@ -17,7 +17,7 @@
         </router-link>
         <el-submenu v-else :index="item.name||item.path" :key="item.name">
           <template slot="title">
-            <i v-if="item.meta&&item.meta.icon" :class="item.meta.icon"></i>
+            <i v-if="item.meta&&item.meta.icon" class="icon iconfont" :class="item.meta.icon"></i>
             <span
               v-if="item.meta&&item.meta.title&&
           !sidebarState"
@@ -36,7 +36,11 @@
 
             <router-link v-else :to="item.path+'/'+child.path" :key="child.name">
               <el-menu-item :index="item.path+'/'+child.path">
-                <i v-if="child.meta&&child.meta.icon" :icon-class="child.meta.icon"></i>
+                <i
+                  v-if="child.meta&&child.meta.icon"
+                  class="icon iconfont"
+                  :icon-class="child.meta.icon"
+                ></i>
                 <span v-if="child.meta&&child.meta.title" slot="title">{{child.meta.title}}</span>
               </el-menu-item>
             </router-link>

@@ -29,15 +29,15 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
-@import "../../../../styles/index.less";
+<style lang="scss" scoped>
+@import "../../../../styles/index.scss";
 .sidebar-wrapper {
   height: 100%;
   width: 100%;
   .el-menu-vertical-demo:not(.el-menu--collapse) {
     width: 200px;
     min-height: 400px;
-    background: @sidebar-bg;
+    background: $sidebar-bg;
   }
 }
 </style>
