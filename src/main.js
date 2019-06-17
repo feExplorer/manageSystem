@@ -18,9 +18,20 @@ import VCharts from 'v-charts'
 
 // 引入 iconfont
 import './assets/iconfont/iconfont.css'
+
+// 引入 mock
+import './mock' // simulation data
 Vue.use(ElementUI, {
   locale
 })
+
+// 挂载 全局filter
+import * as filters from './filters' // global filters
+// register global utility filters.
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
+
 Vue.use(Validate)
 Vue.use(inputDirective)
 Vue.use(VCharts)

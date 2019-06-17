@@ -207,6 +207,56 @@ export const constantRouterMap = [{
         icon: 'icon-table'
       }
     }]
+  }, // 第三方官网
+  {
+    path: '/myiframe',
+    component: Layout,
+    redirect: '/myiframe',
+    children: [{
+      path: ':routerPath',
+      name: 'myiframe',
+      component: () => import('@/components/hl-iframe'),
+      meta: {
+        title: 'thirdPartyWebsite',
+        icon: 'icon-web'
+      }
+    }]
+  },
+  // excel
+  {
+    path: '/excel',
+    component: Layout,
+    redirect: '/excel/exportExcel',
+    name: 'excel',
+    meta: {
+      title: 'excel',
+      icon: 'icon-web-icon-'
+    },
+    children: [{
+        path: 'exportExcel',
+        name: 'exportExcel',
+        component: () => import('@/views/excel/exportExcel'),
+        meta: {
+          title: 'exportExcel'
+        }
+      },
+      {
+        path: 'selectExcel',
+        name: 'selectExcel',
+        component: () => import('@/views/excel/selectExcel'),
+        meta: {
+          title: 'selectExcel'
+        }
+      },
+      {
+        path: 'uploadExcel',
+        name: 'uploadExcel',
+        component: () => import('@/views/excel/uploadExcel'),
+        meta: {
+          title: 'uploadExcel'
+        }
+      }
+    ]
   }
 ]
 export default new Router({

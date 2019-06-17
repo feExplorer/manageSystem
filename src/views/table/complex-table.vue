@@ -177,16 +177,7 @@ export default {
       this.$confirm("确认删除该记录吗?", "提示", {
         type: "warning"
       })
-        .then(() => {
-          const para = { id: row.id };
-          removeUser(para).then(res => {
-            this.$message({
-              message: "删除成功",
-              type: "success"
-            });
-            this.getUsers();
-          });
-        })
+        .then(() => {})
         .catch(() => {});
     },
     // 显示编辑界面
@@ -213,22 +204,7 @@ export default {
       this.$refs.editForm.validate(valid => {
         if (valid) {
           this.$confirm("确认提交吗？", "提示", {})
-            .then(() => {
-              const para = Object.assign({}, this.editForm);
-              para.birth =
-                !para.birth || para.birth === ""
-                  ? ""
-                  : util.formatDate.format(new Date(para.birth), "yyyy-MM-dd");
-              editUser(para).then(res => {
-                this.$message({
-                  message: "提交成功",
-                  type: "success"
-                });
-                this.$refs["editForm"].resetFields();
-                this.dialogFormVisible = false;
-                this.getUsers();
-              });
-            })
+            .then(() => {})
             .catch(e => {
               // 打印一下错误
               console.log(e);
@@ -241,25 +217,7 @@ export default {
       this.$refs.editForm.validate(valid => {
         if (valid) {
           this.$confirm("确认提交吗？", "提示", {})
-            .then(() => {
-              this.editForm.id = parseInt(Math.random() * 100).toString(); // mock a id
-              const para = Object.assign({}, this.editForm);
-              console.log(para);
-
-              para.birth =
-                !para.birth || para.birth === ""
-                  ? ""
-                  : util.formatDate.format(new Date(para.birth), "yyyy-MM-dd");
-              addUser(para).then(res => {
-                this.$message({
-                  message: "提交成功",
-                  type: "success"
-                });
-                this.$refs["editForm"].resetFields();
-                this.dialogFormVisible = false;
-                this.getUsers();
-              });
-            })
+            .then(() => {})
             .catch(e => {
               // 打印一下错误
               console.log(e);
@@ -273,20 +231,10 @@ export default {
     },
     // 批量删除
     batchRemove() {
-      var ids = this.sels.map(item => item.id).toString();
       this.$confirm("确认删除选中记录吗？", "提示", {
         type: "warning"
       })
-        .then(() => {
-          const para = { ids: ids };
-          batchRemoveUser(para).then(res => {
-            this.$message({
-              message: "删除成功",
-              type: "success"
-            });
-            this.getUsers();
-          });
-        })
+        .then(() => {})
         .catch(() => {});
     }
   },
