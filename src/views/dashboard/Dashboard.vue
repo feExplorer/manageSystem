@@ -12,18 +12,24 @@
       <h4>卡片的展示</h4>
       <hl-data-card :option="easyDataOption0"></hl-data-card>
     </div>
+    <div class="item">
+      <h4>带数字的展示</h4>
+      <hl-data-icons :option="easyDataOption1"></hl-data-icons>
+    </div>
   </div>
 </template>
 <script>
 import hlDataDisplay from '@/components/hl-data-display/index'
 import hlDataTab from '@/components/hl-data-tab/index'
 import hlDataCard from '@/components/hl-data-card/index'
+import hlDataIcons from '@/components/hl-data-icons/index'
 export default {
   name: 'report',
   components: {
     hlDataDisplay,
     hlDataTab,
-    hlDataCard
+    hlDataCard,
+    hlDataIcons
   },
   data() {
     return {
@@ -119,32 +125,32 @@ export default {
           {
             title: '今日注册',
             count: 12678,
-            icon: 'icon-cuowu'
+            icon: 'icon-zhuce'
           },
           {
             title: '今日登录',
             count: 22139,
-            icon: 'icon-shujuzhanshi2'
+            icon: 'icon-denglu'
           },
           {
             title: '今日订阅',
             count: 35623,
-            icon: 'icon-jiaoseguanli'
+            icon: 'icon-dingyue'
           },
           {
             title: '今日评论',
             count: 16826,
-            icon: 'icon-caidanguanli'
+            icon: 'icon-pinglun'
           },
           {
-            title: '今日评论',
+            title: '今日播放',
             count: 16826,
-            icon: 'icon-caidanguanli'
+            icon: 'icon-bofang'
           },
           {
-            title: '今日评论',
+            title: '今日发布',
             count: 16826,
-            icon: 'icon-caidanguanli'
+            icon: 'icon-fabu'
           }
         ]
       },
@@ -195,11 +201,11 @@ export default {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  // background: rgba(0, 0, 0, 0.2);
 }
 </style>
 <style lang ="scss">
     @import '../../styles/data-display.scss';
     @import '../../styles/data-tab.scss';
     @import '../../styles/data-card.scss';
+    @import '../../styles/data-icons.scss';
 </style>
