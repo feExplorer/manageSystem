@@ -1,7 +1,8 @@
 <template>
   <div class="sidebar-wrapper">
     <sidebar-logo></sidebar-logo>
-    <el-menu
+    <div style="height:100%;width:220px;overflow-x:hidden">
+      <el-menu
       default-active="1-4-1"
       class="el-menu-vertical-demo"
       mode="vertical"
@@ -12,6 +13,7 @@
     >
       <sidebar-item :routes="permissionRouters"></sidebar-item>
     </el-menu>
+    </div>
   </div>
 </template>
 <script>
@@ -36,7 +38,6 @@ export default {
   width: 100%;
   .el-menu-vertical-demo:not(.el-menu--collapse) {
     width: 200px;
-    min-height: 400px;
     background: $sidebar-bg;
   }
 }
