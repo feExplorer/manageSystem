@@ -257,6 +257,51 @@ export const constantRouterMap = [{
         }
       }
     ]
+  },
+  // pdf
+  {
+    path: '/pdfs',
+    component: Layout,
+    redirect: 'pdfs/pdf',
+    meta: {
+      title: 'PDF',
+      icon: 'icon-pdf'
+    },
+    children: [{
+      path: 'pdf',
+      name: 'pdf',
+      component: () => import('@/views/pdf/index'),
+      meta: {
+        title: 'pdf',
+        icon: 'icon-pdf'
+      }
+    }]
+  },
+  // 表单
+  {
+    path: '/form',
+    component: Layout,
+    redirect: 'form/quill-editor',
+    meta: {
+      title: 'form',
+      icon: 'icon-fuwenben'
+    },
+    children: [{
+      path: 'quill-editor',
+      name: 'quill-editor',
+      component: () => import('@/views/quill-editor/index'),
+      meta: {
+        title: 'quill-editor'
+      }
+    },
+    {
+      path: 'dragList',
+      name: 'dragList',
+      component: () => import('@/views/components/dragBoard.vue'),
+      meta: {
+        title: 'dragList'
+      }
+    }]
   }
 ]
 export default new Router({
