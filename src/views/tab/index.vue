@@ -1,7 +1,7 @@
 <template>
   <div class="tabContainer">
     <div class="container">
-      <el-tabs v-model="message" @tab-click="handleClick">
+      <el-tabs v-model="message">
         <el-tab-pane :label="`未读消息(${unread.length})`" name="first">
           <el-table :data="unread" :show-header="false" style="width: 100%">
             <el-table-column>
