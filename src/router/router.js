@@ -302,6 +302,105 @@ export const constantRouterMap = [{
         title: 'dragList'
       }
     }]
+  },
+  {
+    path: '/tab',
+    component: Layout,
+    redirect: 'tab/tab',
+    meta: {
+      title: 'Tab',
+      icon: 'icon-xuanxiangqia'
+    },
+    children: [{
+      path: 'tab',
+      name: 'tab',
+      component: () => import('@/views/tab/index'),
+      meta: {
+        title: 'Tab',
+        icon: 'icon-xuanxiangqia'
+      }
+    }]
+  },
+  {
+    path: '/lang',
+    component: Layout,
+    redirect: 'lang/lang',
+    meta: {
+      title: 'lang',
+      icon: 'icon-duoyuyan'
+    },
+    children: [{
+      path: 'lang',
+      name: 'lang',
+      component: () => import('@/views/i18n/index'),
+      meta: {
+        title: 'lang',
+        icon: 'icon-duoyuyan'
+      }
+    }]
+  },
+  {
+    path: '/contentmenu',
+    component: Layout,
+    redirect: 'contentmenu/simple',
+    meta: {
+      title: 'contentmenuSimple',
+      icon: 'icon-caidan'
+    },
+    children: [{
+      path: 'simple',
+      name: 'contentmenuSimple',
+      component: () => import('@/views/contentmenu/simple'),
+      meta: {
+        title: 'Simple',
+        icon: 'icon-caidan'
+      }
+    },
+    {
+      path: 'divier',
+      name: 'contentmenuSimple',
+      component: () => import('@/views/contentmenu/divier'),
+      meta: {
+        title: 'Divier',
+        icon: 'icon-caidan'
+      }
+    },
+    {
+      path: 'group',
+      name: 'contentmenuGroup',
+      component: () => import('@/views/contentmenu/group'),
+      meta: {
+        title: 'Group',
+        icon: 'icon-caidan'
+      }
+    },
+    {
+      path: 'disabled',
+      name: 'contentmenuDisabled',
+      component: () => import('@/views/contentmenu/disabled'),
+      meta: {
+        title: 'Disabled',
+        icon: 'icon-caidan'
+      }
+    },
+    {
+      path: 'submenu',
+      name: 'contentmenuSubmenu',
+      component: () => import('@/views/contentmenu/submenu'),
+      meta: {
+        title: 'Submenu',
+        icon: 'icon-caidan'
+      }
+    },
+    {
+      path: 'trigger',
+      name: 'contentmenuTrigger',
+      component: () => import('@/views/contentmenu/trigger'),
+      meta: {
+        title: 'Trigger',
+        icon: 'icon-caidan'
+      }
+    }]
   }
 ]
 export default new Router({

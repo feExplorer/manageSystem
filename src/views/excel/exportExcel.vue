@@ -1,7 +1,7 @@
 <template>
   <!-- $t is vue-i18n global function to translate lang -->
   <div class="app-container">
-    <label class="radio-label" style="padding-left:0;">Filename:</label>
+    <label class="radio-label" style="padding-left:0;">{{$t('excel.filename')}}:</label>
     <el-input style="width:340px;" prefix-icon="el-icon-document" v-model="filename"></el-input>
     <label class="radio-label">Cell Auto Width:</label>
     <el-radio-group v-model="autoWidth">
