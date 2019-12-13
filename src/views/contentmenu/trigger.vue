@@ -41,6 +41,6 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
-@import url("./pub.less");
+<style lang="scss" scoped>
+@import url("./pub.scss");
 </style>

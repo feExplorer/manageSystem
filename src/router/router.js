@@ -340,6 +340,33 @@ export const constantRouterMap = [{
     }]
   },
   {
+    path: '/schedule',
+    component: Layout,
+    redirect: 'schedule/week',
+    meta: {
+      title: 'lang',
+      icon: 'icon-shijian-xianxing'
+    },
+    children: [{
+      path: 'index',
+      name: 'indexSchedule',
+      component: () => import('@/views/schedule/index'),
+      meta: {
+        title: 'indexSchedule',
+        icon: 'icon-shijian-xianxing'
+      }
+    },
+    {
+      path: 'week',
+      name: 'weekSchedule',
+      component: () => import('@/views/schedule/week'),
+      meta: {
+        title: 'weekSchedule',
+        icon: 'icon-shijian-xianxing'
+      }
+    }]
+  },
+  {
     path: '/contentmenu',
     component: Layout,
     redirect: 'contentmenu/simple',
@@ -358,7 +385,7 @@ export const constantRouterMap = [{
     },
     {
       path: 'divier',
-      name: 'contentmenuSimple',
+      name: 'contentmenuDivier',
       component: () => import('@/views/contentmenu/divier'),
       meta: {
         title: 'Divier',

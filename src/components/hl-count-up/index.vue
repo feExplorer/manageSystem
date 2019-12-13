@@ -67,8 +67,8 @@ export default {
           this.callback(this.c)
         })
       }
-      console.log(this.c)
-      console.log(this.end)
+      // console.log(this.c)
+      // console.log(this.end)
     },
     destroy() {
       this.c = null

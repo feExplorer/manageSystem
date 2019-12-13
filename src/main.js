@@ -29,6 +29,8 @@ import './mock' // simulation data
 // 挂载 全局filter
 import * as filters from './filters' // global filters
 
+// 引入自己的组件
+import hl from './components/index'
 // register global utility filters.
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
@@ -41,6 +43,7 @@ Vue.use(Validate)
 Vue.use(inputDirective)
 Vue.use(VCharts)
 Vue.use(contentmenu)
+Vue.use(hl)
 Vue.config.productionTip = false
 
 new Vue({
